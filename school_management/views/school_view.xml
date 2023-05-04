@@ -1,0 +1,20 @@
+<odoo>
+    <record id="school_tree_view" model="ir.ui.view">
+        <field name="name">School Tree View</field>
+        <field name="model">school</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="school_form_view" model="ir.ui.view">
+        <field name="name">School Form View</field>
+        <field name="model">school</field>
+        <field name="arch" type="xml">
+            <form>
+            </form>
+        </field>
+    </record>
+</odoo>
