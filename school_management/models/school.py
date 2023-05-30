@@ -1,3 +1,9 @@
+#
+#     Title: School class
+#     Author: Felipe Rocha Dias; Gustavo Neves de Paiva
+#     Subject: Implementação e Teste de Projeto de Software
+#     Teacher: Pedro Toledo
+#
 from odoo import fields, models, api
 
 
@@ -6,6 +12,7 @@ class School(models.Model):
 
     name = fields.Char('School Name')
 
+    # School address
     street = fields.Char('Street')
 
     city = fields.Char('City')

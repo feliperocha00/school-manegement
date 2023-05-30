@@ -1,0 +1,46 @@
+<!--
+
+     Title: Student form view
+     Author: Felipe Rocha Dias; Gustavo Neves de Paiva
+     Subject: Implementação e Teste de Projeto de Software
+     Teacher: Pedro Toledo
+
+-->
+<odoo>
+    <record id="teacher_form_view" model="ir.ui.view">
+        <field name="name">Teacher Form View</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='internal_notes']" position="after">
+                <page attrs="{'invisible':[('department_id', '!=', 3)]}">
+                    <field namme="class_id"/>
+                    <group>
+                        <field namme="birthday"/>
+                        <field namme="nationality"/>
+                        <field namme="place_of_birth"/>
+                        <field namme="identification_number"/>
+                        <field namme="genre"/>
+                        <field namme="street"/>
+                        <field namme="street2"/>
+                        <field namme="city"/>
+                        <field namme="state"/>
+                        <field namme="zip_code"/>
+                    </group>
+                    <group>
+                        <field namme="responsible_name"/>
+                        <field namme="responsible_phone"/>
+                        <field namme="responsible_email"/>
+                        <field namme="responsible_profession"/>
+                        <field namme="responsible2_name"/>
+                        <field namme="responsible2_phone"/>
+                        <field namme="responsible2_email"/>
+                        <field namme="responsible2_profession"/>
+                        <field namme="emergency_number"/>
+                        <field namme="emergency_number2"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

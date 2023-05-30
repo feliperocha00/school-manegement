@@ -1,12 +1,21 @@
+<!--
+
+     Title: School form view
+     Author: Felipe Rocha Dias; Gustavo Neves de Paiva
+     Subject: Implementação e Teste de Projeto de Software
+     Teacher: Pedro Toledo
+
+-->
 <odoo>
-    <record id="school_tree_view" model="ir.ui.view">
-        <field name="name">School Tree View</field>
-        <field name="model">school</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="name"/>
-            </tree>
-        </field>
+
+    <menuitem name="School Management" id="school_management_root_menu"
+              web_icon="school_management,static/description/icon.png"
+              action="school_action"/>
+
+    <record id="school_action" model="ir.actions.act_window">
+        <field name="name">School</field>
+        <field name="res_model">school</field>
+        <field name="view_mode">form</field>
     </record>
 
     <record id="school_form_view" model="ir.ui.view">
@@ -14,6 +23,17 @@
         <field name="model">school</field>
         <field name="arch" type="xml">
             <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="street"/>
+                        <field name="city"/>
+                        <field name="district"/>
+                        <field name="state"/>
+                        <field name="zip"/>
+                        <field name="country"/>
+                    </group>
+                </sheet>
             </form>
         </field>
     </record>

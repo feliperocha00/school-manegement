@@ -1,0 +1,48 @@
+<!--
+
+     Title: Class view
+     Author: Felipe Rocha Dias; Gustavo Neves de Paiva
+     Subject: Implementação e Teste de Projeto de Software
+     Teacher: Pedro Toledo
+
+-->
+<odoo>
+
+    <menuitem name="Classes" id="class_root_menu" web_icon="classes,static/description/icon.png"
+              action="class_action"/>
+
+    <record id="class_action" model="ir.actions.act_window">
+        <field name="name">Class</field>
+        <field name="res_model">classes</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <record id="class_tree_view" model="ir.ui.view">
+        <field name="name">Class Tree View</field>
+        <field name="model">classes</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="class_num"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="class_form_view" model="ir.ui.view">
+        <field name="name">Class Form View</field>
+        <field name="model">classes</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Grade">
+                            <field name="class_num"/>
+                        </group>
+                        <group string="Teacher">
+                            <field name="teacher_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

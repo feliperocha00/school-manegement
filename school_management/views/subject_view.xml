@@ -1,0 +1,29 @@
+<!--
+
+     Title: Subject form view
+     Author: Felipe Rocha Dias; Gustavo Neves de Paiva
+     Subject: Implementação e Teste de Projeto de Software
+     Teacher: Pedro Toledo
+
+-->
+<odoo>
+
+    <menuitem name="Subject" id="subject_menu" parent="school_management_root_menu"
+              action="subject_action"/>
+
+    <record id="subject_action" model="ir.actions.act_window">
+        <field name="name">Subject</field>
+        <field name="res_model">subject</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    <record id="subject_form_view" model="ir.ui.view">
+        <field name="name">Subject Form View</field>
+        <field name="model">subject</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="name"/>
+            </form>
+        </field>
+    </record>
+</odoo>

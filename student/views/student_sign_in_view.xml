@@ -1,0 +1,80 @@
+<odoo>
+    <record name="student_sign_in_action" model="ir.actions.act_window">
+        <field name="name">Student Sign-In</field>
+        <field name="res_model">student.sign_in</field>
+        <field name="view_mode">form</field>
+    </record>
+
+    
+
+    <record name="student_sign_in_view_1" model="ir.ui.view">
+        <field name="name">Student Sign-In</field>
+        <field name="model">student.sign_in</field>
+        <fields name="arch" type="xml">
+            <form>
+                <field name="name"/>
+                <group>
+                    <group>
+                        <field name="birthday"/>
+                        <field name="nationality"/>
+                        <field name="place_of_birth"/>
+                        <field name="identification_number"/>
+                        <field name="genre"/>
+                    </group>
+                </group>
+            </form>
+        </fields>
+    </record>
+
+    <record name="student_sign_in_view_2" model="ir.ui.view">
+        <field name="name">Student Sign-In</field>
+        <field name="model">student.sign_in</field>
+        <fields name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="street"/>
+                        <field name="street2"/>
+                        <field name="city"/>
+                    </group>
+                    <group>
+                        <field name="state"/>
+                        <field name="country"/>
+                        <field name="zip_code"/>
+                    </group>
+                </group>
+            </form>
+        </fields>
+    </record>
+
+    <record name="student_sign_in_view_3" model="ir.ui.view">
+        <field name="name">Student Sign-In</field>
+        <field name="model">student.sign_in</field>
+        <fields name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="responsible_name"/>
+                        <field name="responsible_phone"/>
+                        <field name="responsible_email"/>
+                        <field name="responsible_profession"/>
+                    </group>
+                    <group>
+                        <field name="responsible2_name"/>
+                        <field name="responsible2_phone"/>
+                        <field name="responsible2_email"/>
+                        <field name="responsible2_profession"/>
+                    </group>
+                </group>
+                <group>
+                    <group>
+                        <field name="emergency_number"/>
+                    </group>
+                    <group>
+                        <field name="emergency_number2"/>
+                    </group>
+                </group>
+            </form>
+        </fields>
+    </record>
+</odoo>

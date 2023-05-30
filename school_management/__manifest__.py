@@ -6,7 +6,11 @@
     'company': 'Universidade Mogi das Cruzes',
     'depends': ['base',],
     'data': [
-        'views/'
+        'views/class_view.xml',
+        'views/school_view.xml',
+        'views/subject_view.xml',
+        'views/teacher_view.xml',
         'security/ir.model.access.csv',
-    ]
+    ],
+    'application': True
 }

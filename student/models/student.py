@@ -1,27 +1,52 @@
+#
+#     Title: Student class
+#     Author: Felipe Rocha Dias; Gustavo Neves de Paiva
+#     Subject: Implementação e Teste de Projeto de Software
+#     Teacher: Pedro Toledo
+#
 from odoo import fields, models, api
 
 
 class Student(models.Model):
-    _name = 'student'
+    _inherit = 'hr.employee'
 
-    name = fields.Char('School Name')
+    # STUDENT DATA
+    name = fields.Char('Name')
 
-    age = fields.Integer('Age')
+    class_id = fields.Many2one(comodel_name='classes', string='Class')
 
+    # ADDRESS
     street = fields.Char('Street')
+
+    street2 = fields.Char('Street 2')
 
     city = fields.Char('City')
 
-    district = fields.Char('District')
-
     state = fields.Char('State')
 
-    zip = fields.Char('Zip Code')
+    country = fields.Many2one('res.country', 'Country')
 
-    country = fields.Char('Country')
+    zip_code = fields.Char('Zip Code')
 
-    school_id = fields.Many2one(comodel_name='school', string='School')
+    # RESPONSIBLE FOR STUDENT
+    responsible_name = fields.Char('Responsible name')
 
-    class_id = fields.Many2one(comodel_name='class', string='Class')
+    responsible_phone = fields.Char('Responsible phone')
 
-    def register(self):
+    responsible_email = fields.Char('Responsible e-mail')
+
+    responsible_profession = fields.Char('Responsible profession')
+
+    # RESPONSIBLE FOR STUDENT
+    responsible2_name = fields.Char('2nd Responsible name')
+
+    responsible2_phone = fields.Char('2nd Responsible phone')
+
+    responsible2_email = fields.Char('2nd Responsible email')
+
+    responsible2_profession = fields.Char('2nd Responsible profession')
+
+    # MORE INFORMATION
+    emergency_number = fields.Char('Emergency number')
+
+    emergency_number2 = fields.Char('Emergency number')

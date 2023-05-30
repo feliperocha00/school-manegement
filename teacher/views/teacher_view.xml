@@ -1,0 +1,20 @@
+<!--
+
+     Title: Teacher form view
+     Author: Felipe Rocha Dias; Gustavo Neves de Paiva
+     Subject: Implementação e Teste de Projeto de Software
+     Teacher: Pedro Toledo
+
+-->
+<odoo>
+    <record id="teacher_form_view" model="ir.ui.view">
+        <field name="name">Teacher Form View</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='department_id']" position="after">
+<!--                <field name="subject"/>-->
+            </xpath>
+        </field>
+    </record>
+</odoo>
